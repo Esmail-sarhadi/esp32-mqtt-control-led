@@ -2,6 +2,9 @@ import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
 
+
+
+
 # Time settings
 t = np.linspace(0, 0.1, 1000)  # 100ms duration
 t_detail = np.linspace(0, 0.01, 1000)  # 10ms for detailed view
@@ -28,7 +31,7 @@ plt.grid(True)
 plt.title('2. Full-Wave Rectified Output (After Bridge Rectifier)', fontsize=12)
 plt.xlabel('Time (ms)', fontsize=10)
 plt.ylabel('Voltage (V)', fontsize=10)
-save_plot('2_rectified.png')
+save_plot('20_rectified.png')
 
 # 3. DC Link (after filtering)
 plt.figure(figsize=(12, 6), dpi=300)
@@ -85,7 +88,7 @@ plt.grid(True)
 plt.ylabel('Rectified (V)', fontsize=10)
 
 # DC Link
-plt.subplot(4, 1, 3)
+plt.subplot(40, 1, 3)
 plt.plot(t * 1000, dc_filtered, 'g-', linewidth=2)
 plt.grid(True)
 plt.ylabel('DC Link (V)', fontsize=10)
